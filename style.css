@@ -1,0 +1,91 @@
+/*Add box-sizing:border-box; to all elements and pseudoelements with the "*" selector */
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+/*Remocve all margin and padding from the body*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*MAke your section fill the entire viewport by setting the height to 100vh and the width to 100%
+also set the background to the color specified in the styleguide(Off Black: hsl(0, 0%, 8%)).Set the display to flex and set 
+Justify content and align-items to center in order to center the main element horizontally and vertically*/
+section{
+    height: 100vh;
+    width: 100%;
+    background: hsl(0, 0%, 8%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Now to our main element
+Set the background to the specified value in the styleguide(Dark Grey: hsl(0, 0%, 12%))*
+set display to flex and flex-direction to column*/
+main{
+    background: hsl(0, 0%, 12%);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 1em;
+    max-width: 400px;
+    min-width: 50px;
+}
+/*add the same flex properties and values as the main element and add align-items*/
+div.bio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+/*The image is a bit too big make the width a bit smaller let's gp for 100px
+make the height and width 100px so that the image is now a sqaure. Now that the image is a square add a border-radius
+of 50% to make it a perfect circle*/
+img.profile{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+/*These elements seem a little too far apart vertically let's reduce the margin-bottom and top to 0*/
+/*add the color green(hsl(75, 94%, 57%)) to your .location element's text*/
+.location{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: hsl(75, 94%, 57%);
+}
+.name{
+    margin-bottom: 0.2em;
+    margin-top: 0.4em;
+}
+.description{
+    font-size: .8rem;
+}
+/*Add a display of flex and flex-direction column to your .links element*/
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+/*Format the links to make them look better remeber to add the addresses of your socials to the html*/
+/*Add some transition rules for the active state*/
+.links a{
+    color:white;
+    text-decoration: none;
+    width: 100%;
+    padding: 1em 7em;
+    text-align: center;
+    background: hsl(0, 0%, 20%);
+    margin-bottom: 1em;
+    border-radius: .4em;
+    font-size: .8rem;
+    transition: 500ms ease-in-out;
+}
+/*Add a css rule for the active state of the links to change their background and scale them up a bit*/
+.links a:active{
+    background-color: hsl(75, 94%, 57%);
+    scale: 1.01;
+}
